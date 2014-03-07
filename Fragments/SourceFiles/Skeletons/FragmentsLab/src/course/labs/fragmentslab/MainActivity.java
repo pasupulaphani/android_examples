@@ -67,8 +67,9 @@ public class MainActivity extends Activity implements
 
 			//TODO 2 - replace the fragment_container with the FeedFragment
 			
-			getFragmentManager().beginTransaction()
-				.replace(R.id.fragment_container, new FeedFragment()).commit();
+			FragmentTransaction fragTrans = getFragmentManager().beginTransaction();
+			fragTrans.replace(R.id.fragment_container, mFeedFragment);
+			fragTrans.commit();
 			
 
 			// execute transaction now
